@@ -11,11 +11,12 @@ import java.sql.SQLException;
 @Configuration
 public class DatabaseConfig {
 
-    private String user = System.getenv("admin");
-    private String password = System.getenv("adminpass");
-    private String serverName = System.getenv("192.168.56.101"); // db host name, like localhost without the port
+    private String user = System.getenv("DB_USER");
+    private String password = System.getenv("DB_PWD");;
+    private String serverName = System.getenv("DB_SERVER");
     private String dbName = System.getenv("team-member-project");
     private MysqlDataSource datasource = new MysqlDataSource();
+
 
     public DatabaseConfig() {
         datasource.setPassword(password);
