@@ -1,4 +1,17 @@
-.idea
-build
-out
+# IDE and build output
+.idea/
+.gradle/
 .gradle*
+build/
+out/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# SSH keys and certificates
+*.pem
+*.key
+id_rsa
+id_ed25519
